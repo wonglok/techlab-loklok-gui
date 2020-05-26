@@ -3,7 +3,7 @@
     <ScissorArea class="taller">
       <div slot="dom" class="relative full">
         <div class="absolute top-0 left-0 p-6 text-white text-xl">
-          <a href="/">
+          <a href="http://palms.polyu.edu.hk/">
             <img src="../image/logo.png" class="h-8 lg:h-12 cursor-pointer opacity-50 hover:opacity-100 transition-opacity duration-500" alt="Home">
           </a>
         </div>
