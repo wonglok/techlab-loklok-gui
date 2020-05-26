@@ -13,8 +13,9 @@ export default {
   props: {
     text: {},
     font: {
-      default: 'SeasideResortNF'
+      default: 'LoveLo'
     },
+    envMap: {},
     align: {
       default: 'center'
     }
@@ -33,9 +34,20 @@ export default {
       console.log('exec-texture-text', this.text)
       this.o3d.position.z = 1
 
-      async function loadSeaside () {
-        const font = new FontFace('SeasideResortNF', `url('/fonts/seaside/SeasideResortNF.eot?#iefix') format('embedded-opentype'),  url('/fonts/seaside/SeasideResortNF.woff') format('woff'), url('/fonts/seaside/SeasideResortNF.ttf')  format('truetype'), url('/fonts/seaside/SeasideResortNF.svg#SeasideResortNF') format('svg')`, {
-          family: 'SeasideResortNF',
+      // async function loadSeaside () {
+      //   const font = new FontFace('SeasideResortNF', `url('/fonts/seaside/SeasideResortNF.eot?#iefix') format('embedded-opentype'),  url('/fonts/seaside/SeasideResortNF.woff') format('woff'), url('/fonts/seaside/SeasideResortNF.ttf')  format('truetype'), url('/fonts/seaside/SeasideResortNF.svg#SeasideResortNF') format('svg')`, {
+      //     family: 'SeasideResortNF',
+      //     style: 'normal',
+      //     weight: `normal`
+      //     // `font-weight: normal; font-style: normal;`
+      //   })
+
+      //   await font.load()
+      //   document.fonts.add(font)
+      // }
+      async function loadLovelo () {
+        const font = new FontFace('LoveLo', `url('/fonts/lovelo/Lovelo-LineLight.ttf')  format('truetype')`, {
+          family: 'LoveLo',
           style: 'normal',
           weight: `normal`
           // `font-weight: normal; font-style: normal;`
@@ -44,8 +56,8 @@ export default {
         await font.load()
         document.fonts.add(font)
       }
-      if (this.font === 'SeasideResortNF') {
-        await loadSeaside()
+      if (this.font === 'LoveLo') {
+        await loadLovelo()
       }
 
       let texture = new TextTexture({
@@ -88,7 +100,7 @@ export default {
       this.$emit('child', sizing)
       this.$parent.$emit('child', sizing)
 
-      let mat = new MeshBasicMaterial({ color: 0xffffff, opacity: 1, map: texture, transparent: true })
+      let mat = new MeshBasicMaterial({ color: 0xffffff, opacity: 1, map: texture, transparent: true, envMap: this.envMap })
       let item = new Mesh(geo, mat)
       this.o3d.children.forEach((v) => {
         this.$emit('disable-play', v)

@@ -21,10 +21,10 @@
     </O3D>
 
     <O3D :animated="true" :layout="'frontlayout'">
-      <LoveloFont text="PALMS Tech Lab" :envMap="shaderCube.out.envMap"></LoveloFont>
+      <TextureText :envMap="shaderCube.out.envMap" :canplay="true" font="LoveLo" align="left" :clicked="() => {}" :text="'PALMS Tech Lab'"></TextureText>
 
       <O3D layout="subtitle">
-       <LoveloFont text="By Wong Lok" :envMap="shaderCube.out.envMap"></LoveloFont>
+        <TextureText :envMap="shaderCube.out.envMap" :canplay="true" font="LoveLo" align="left" :clicked="() => {}" :text="'by Wong Lok'"></TextureText>
       </O3D>
       <!-- <HeartGrid @hit="$emit('hit', $event)"></HeartGrid> -->
     </O3D>
@@ -100,7 +100,7 @@ export default {
     this.scene.background = new Color('#000000')
     // this.scene.background = new TextureLoader().load(require('./img/stained-glass.jpg'))
 
-    this.shaderCube = new ShaderCubeRefraction({ renderer: this.lookup('renderer'), loop: this.lookup('base').onLoop, res: 32 })
+    this.shaderCube = new ShaderCubeRefraction({ renderer: this.lookup('renderer'), loop: this.lookup('base').onLoop, res: 64 })
 
     // prepare camera
     this.camera = new PCamera({ base: this.lookup('base'), element: this.lookup('element') })
@@ -128,9 +128,9 @@ export default {
     // let parentScrollBox = this.lookup('scrollBox')
     var Params = {
       exposure: 1,
-      bloomStrength: 2.5,
-      bloomThreshold: 0.1,
-      bloomRadius: 1.5
+      bloomStrength: 1.75,
+      bloomThreshold: 0.251,
+      bloomRadius: 1.0
     }
     let renderer = this.lookup('renderer')
     let element = this.lookup('element')
@@ -166,12 +166,12 @@ export default {
         'frontlayout': {
           py: '50',
 
-          sx: 0.75,
-          sy: 0.75,
-          sz: 0.75
+          sx: 10.75,
+          sy: 10.75,
+          sz: 10.75
         },
         'subtitle': {
-          py: -120,
+          py: -10,
           sx: 0.5,
           sy: 0.5,
           sz: 0.5
