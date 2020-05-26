@@ -7,7 +7,7 @@
         <ScissorArea class="lg:absolute top-0 left-0 right-0 bottom-0 h-min100 lg:h-auto" style="z-index: -1;">
           <div slot="dom" class="full">
           </div>
-          <DashbaordScene slot="o3d"></DashbaordScene>
+          <SpacewalkScene slot="o3d"></SpacewalkScene>
         </ScissorArea>
         <!--  -->
       </div>
@@ -19,10 +19,10 @@
         </ScissorArea> -->
 
         <div class="px-3 max-w-xl mx-auto  py-24 lg:py-32 xl:py-64">
-          <div class="px-3 mb-1 text-3xl md:text-4xl font-bold">
+          <div class="px-3 mb-2 text-3xl md:text-4xl font-bold">
             Thanks for reading
           </div>
-          <div class="px-3 text-gray-600">
+          <div class="px-3 mt-1 text-gray-600">
             Best wishes,
           </div>
           <div class="px-3 text-sm mb-3 text-gray-600">

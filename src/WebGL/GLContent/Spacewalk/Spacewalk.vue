@@ -73,43 +73,45 @@ export default {
 
       let all = await Promise.all([
         new Promise((resolve) => {
+          let link = `https://res.cloudinary.com/loklok-keystone/raw/upload/v1590477755/loklok/model/spaceship-walk.fbx`
           // eslint-disable-next-line
-          loaderFBX.load(require('file-loader!./fbx/spaceship-walk.fbx'), (v) => {
+          loaderFBX.load(link || require('file-loader!./fbx/spaceship-walk.fbx'), (v) => {
             resolve(v)
           })
         }),
+        // new Promise((resolve) => {
+        //   // eslint-disable-next-line
+        //   loaderTex.load(require('./matcap/red-2.jpg'), (obj) => {
+        //     let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
+        //     resolve(result)
+        //   })
+        // }),
+        // new Promise((resolve) => {
+        //   // eslint-disable-next-line
+        //   loaderTex.load(require('./matcap/pink-2.jpg'), (obj) => {
+        //     let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
+        //     resolve(result)
+        //   })
+        // }),
+        // new Promise((resolve) => {
+        //   // eslint-disable-next-line
+        //   loaderTex.load(require('./matcap/silver.png'), (obj) => {
+        //     let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
+        //     resolve(result)
+        //   })
+        // }),
+        // new Promise((resolve) => {
+        //   // eslint-disable-next-line
+        //   loaderTex.load(require('./matcap/yellow.jpg'), (obj) => {
+        //     let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
+        //     resolve(result)
+        //   })
+        // }),
         new Promise((resolve) => {
+          let link = `https://res.cloudinary.com/loklok-keystone/image/upload/v1590477810/loklok/matcap/silver.png`
           // eslint-disable-next-line
-          loaderTex.load(require('./matcap/red-2.jpg'), (obj) => {
-            let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
-            resolve(result)
-          })
-        }),
-        new Promise((resolve) => {
-          // eslint-disable-next-line
-          loaderTex.load(require('./matcap/pink-2.jpg'), (obj) => {
-            let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
-            resolve(result)
-          })
-        }),
-        new Promise((resolve) => {
-          // eslint-disable-next-line
-          loaderTex.load(require('./matcap/silver.png'), (obj) => {
-            let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
-            resolve(result)
-          })
-        }),
-        new Promise((resolve) => {
-          // eslint-disable-next-line
-          loaderTex.load(require('./matcap/yellow.jpg'), (obj) => {
-            let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xffffff, matcap: obj })
-            resolve(result)
-          })
-        }),
-        new Promise((resolve) => {
-          // eslint-disable-next-line
-          loaderTex.load(require('./matcap/silver.png'), (obj) => {
-            let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xf4d146, matcap: obj })
+          loaderTex.load(link || require('./matcap/silver.png'), (obj) => {
+            let result = new MeshMatcapMaterial({ transparent: true, opacity: 1.0, color: 0xeeeeee, matcap: obj })
             resolve(result)
           })
         })
@@ -119,11 +121,11 @@ export default {
         fbx: all[0],
         mats: {
           shaderCubeMat: shaderCube.out.material,
-          red2: all[1],
-          pink2: all[2],
-          silver: all[3],
-          yellow: all[4],
-          yellow2: all[5]
+          // red2: all[1],
+          // pink2: all[2],
+          silver: all[1]
+          // yellow: all[4],
+          // yellow2: all[5]
         }
       })
     }
