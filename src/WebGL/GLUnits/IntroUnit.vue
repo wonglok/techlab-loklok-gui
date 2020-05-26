@@ -20,10 +20,13 @@
 
         <div class="px-3 max-w-xl mx-auto  py-24 lg:py-32 xl:py-64">
           <div class="px-3 mb-1 text-3xl md:text-4xl font-bold">
-            PALMS Tech Lab
+            Thanks for reading
           </div>
-          <div class="px-3 mb-3 text-gray-600">
-            by Lok Lok
+          <div class="px-3 text-gray-600">
+            Best wishes,
+          </div>
+          <div class="px-3 text-sm mb-3 text-gray-600">
+            Wong Lok
           </div>
           <div></div>
         </div>

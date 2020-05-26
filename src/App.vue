@@ -27,6 +27,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
+  margin-top: -1px;
   color: black;
 }
 #lokapp .wpadminbar{

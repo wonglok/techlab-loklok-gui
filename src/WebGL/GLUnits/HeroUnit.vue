@@ -1,7 +1,12 @@
 <template>
   <div class="full">
     <ScissorArea class="taller">
-      <div slot="dom" class="">
+      <div slot="dom" class="relative full">
+        <div class="absolute top-0 left-0 p-6 text-white text-xl">
+          <a href="/">
+            <img src="../image/logo.png" class="h-12 cursor-pointer" alt="Home">
+          </a>
+        </div>
         <!-- <div class="w-full py-32 ">
           <div class="font-bold text-3xl textshadow text-center ">
             PALMS TechLab
