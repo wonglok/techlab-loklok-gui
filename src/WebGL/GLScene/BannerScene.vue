@@ -22,7 +22,7 @@
     </O3D>
 
     <O3D :animated="true" :layout="'frontlayout'">
-      <TextureText :envMap="shaderCube.out.envMap" :canplay="true" font="LoveLo" align="left" :clicked="() => {}" :text="'PALMS Tech Lab'"></TextureText>
+      <TextureText :envMap="shaderCube.out.envMap" :canplay="true" font="LoveLo" align="left" :clicked="() => {}" :text="'Fun Experiments'"></TextureText>
 
       <O3D layout="subtitle">
         <TextureText :envMap="shaderCube.out.envMap" :canplay="true" font="LoveLo" align="left" :clicked="() => {}" :text="'by Wong Lok'"></TextureText>
