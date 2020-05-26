@@ -1,38 +1,18 @@
 <template>
-  <div class="">
-
-    <div class="flex flex-col lg:flex-row">
-
-      <div class="lg:w-1/2 relative">
-        <ScissorArea class="lg:absolute top-0 left-0 right-0 bottom-0 h-min100 lg:h-auto" style="z-index: -1;">
-          <div slot="dom" class="full">
-            123
+  <div class="full">
+    <ScissorArea class="taller">
+      <div slot="dom" class="">
+        <!-- <div class="w-full py-32 ">
+          <div class="font-bold text-3xl textshadow text-center ">
+            PALMS TechLab
           </div>
-          <FallScene slot="o3d"></FallScene>
-        </ScissorArea>
-        <!--  -->
+          <div class="font-bold text-lg text-black textshadow text-center ">
+            by Wong Lok
+          </div>
+        </div> -->
       </div>
-      <div class="lg:w-1/2 relative">
-        <!-- <ScissorArea class="absolute top-0 left-0 right-0 bottom-0" style="z-index: -1;">
-          <div slot="dom" class="full">
-          </div>
-          <HowScene slot="o3d"></HowScene>
-        </ScissorArea> -->
-
-        <div class="px-3 max-w-xl mx-auto  py-24 lg:py-32 xl:py-64">
-          <div class="px-3 mb-1 text-3xl md:text-4xl font-bold">
-            PALMS Tech Lab
-          </div>
-          <div class="px-3 mb-3 text-gray-600">
-            by Lok Lok
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- -->
-
+      <BannerScene slot="o3d"></BannerScene>
+    </ScissorArea>
   </div>
 </template>
 
@@ -50,5 +30,10 @@ export default {
 </script>
 
 <style scoped>
-
+.taller{
+  height: 80vmin;
+}
+.textshadow{
+  text-shadow: 0px 0px 10px #ffffff, 0px 0px 10px #ffffff, 0px 0px 10px #ffffff;
+}
 </style>

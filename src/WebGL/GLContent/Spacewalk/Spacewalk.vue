@@ -74,7 +74,7 @@ export default {
       let all = await Promise.all([
         new Promise((resolve) => {
           // eslint-disable-next-line
-          loaderFBX.load(require('file-loader!./fbx/spaceship-walk.fbx').default, (v) => {
+          loaderFBX.load(require('file-loader!./fbx/spaceship-walk.fbx'), (v) => {
             resolve(v)
           })
         }),

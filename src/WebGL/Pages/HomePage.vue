@@ -1,8 +1,8 @@
 <template>
   <div class="full">
-    <div class="fixed top-0 left-0 full pointer-events-none" :style="{ zIndex: 0 }" ref="mounter"></div>
+    <div class="fixed top-0 left-0 full pointer-events-none" :style="{ zIndex: -1 }" ref="mounter"></div>
 
-    <div v-show="!openMenu" class="w-full h-full relative">
+    <div v-show="!openMenu">
       <HeroUnit></HeroUnit>
       <IntroUnit></IntroUnit>
     </div>
@@ -20,8 +20,8 @@ export default {
   data () {
     return {
       openMenu: false,
-      origColor: '',
-      bgColor: '#fafafa'
+      origColor: ''
+      // bgColor: '#fafafa'
     }
   },
   mounted () {
@@ -31,11 +31,11 @@ export default {
 
     // this.scrollBox = makeScrollBox({ dom: window, base: this.base })
 
-    this.origColor = document.body.style.backgroundColor
-    document.body.style.backgroundColor = this.bgColor
+    // this.origColor = document.body.style.backgroundColor
+    // document.body.style.backgroundColor = this.bgColor
   },
   beforeDestroy () {
-    document.body.style.backgroundColor = this.origColor
+    // document.body.style.backgroundColor = this.origColor
   },
   methods: {
 

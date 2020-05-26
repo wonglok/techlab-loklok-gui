@@ -15,12 +15,17 @@
     </O3D> -->
 
     <O3D :animated="true" :layout="'bglayer'">
-      <MBLinesBloom></MBLinesBloom>
+      <!-- <MBLinesBloom></MBLinesBloom> -->
       <!-- <BloomBG></BloomBG> -->
       <!-- <RiverField :mode="'magic'"></RiverField> -->
     </O3D>
 
-    <O3D :animated="true" :layout="'frontlayer'">
+    <O3D :animated="true" :layout="'frontlayout'">
+      <LoveloFont text="PALMS Tech Lab" :envMap="shaderCube.out.envMap"></LoveloFont>
+
+      <O3D layout="subtitle">
+       <LoveloFont text="By Wong Lok" :envMap="shaderCube.out.envMap"></LoveloFont>
+      </O3D>
       <!-- <HeartGrid @hit="$emit('hit', $event)"></HeartGrid> -->
     </O3D>
 
@@ -53,7 +58,7 @@
 </template>
 
 <script>
-import { Tree, PCamera, ShaderCube } from '../Reusable'
+import { Tree, PCamera, ShaderCubeRefraction } from '../Reusable'
 import { Scene, Color, Vector2 } from 'three'
 
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
@@ -95,7 +100,7 @@ export default {
     this.scene.background = new Color('#000000')
     // this.scene.background = new TextureLoader().load(require('./img/stained-glass.jpg'))
 
-    this.shaderCube = new ShaderCube({ renderer: this.lookup('renderer'), loop: this.lookup('base').onLoop, res: 32 })
+    this.shaderCube = new ShaderCubeRefraction({ renderer: this.lookup('renderer'), loop: this.lookup('base').onLoop, res: 32 })
 
     // prepare camera
     this.camera = new PCamera({ base: this.lookup('base'), element: this.lookup('element') })
@@ -123,7 +128,7 @@ export default {
     // let parentScrollBox = this.lookup('scrollBox')
     var Params = {
       exposure: 1,
-      bloomStrength: 1.5,
+      bloomStrength: 2.5,
       bloomThreshold: 0.1,
       bloomRadius: 1.5
     }
@@ -157,6 +162,19 @@ export default {
       this.layouts = {
         'bglayer': {
           pz: '-1600'
+        },
+        'frontlayout': {
+          py: '50',
+
+          sx: 0.75,
+          sy: 0.75,
+          sz: 0.75
+        },
+        'subtitle': {
+          py: -120,
+          sx: 0.5,
+          sy: 0.5,
+          sz: 0.5
         }
         // 'frontlayer': {
         //   pz: (this.camera.position.z - this.camera.position.z * 0.1),

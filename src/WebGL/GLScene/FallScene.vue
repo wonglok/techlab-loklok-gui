@@ -17,6 +17,7 @@
       <!-- <ImageBG v-if="image" :image="image"></ImageBG> -->
       <!-- <FBM2BG></FBM2BG> -->
       <GradientBG></GradientBG>
+      <!-- <MBLinesBloom></MBLinesBloom> -->
     </O3D>
 
     <!-- <O3D :animated="true" :layout="'cluster'">
