@@ -18,6 +18,7 @@
       <!-- <MBLinesBloom></MBLinesBloom> -->
       <!-- <BloomBG></BloomBG> -->
       <!-- <RiverField :mode="'magic'"></RiverField> -->
+      <ChromaticsBG></ChromaticsBG>
     </O3D>
 
     <O3D :animated="true" :layout="'frontlayout'">
