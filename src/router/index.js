@@ -21,6 +21,8 @@ const routes = [
   }
 ]
 
+// console.log()
+
 const router = new VueRouter({
   mode: 'hash',
   base: process.env.BASE_URL,

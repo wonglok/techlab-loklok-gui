@@ -46,7 +46,7 @@ export default {
       //   document.fonts.add(font)
       // }
       async function loadLovelo () {
-        const font = new FontFace('LoveLo', `url('/fonts/lovelo/Lovelo-LineLight.ttf')  format('truetype')`, {
+        const font = new FontFace('LoveLo', `url('${process.env.BASE_URL}fonts/lovelo/Lovelo-LineLight.ttf')  format('truetype')`, {
           family: 'LoveLo',
           style: 'normal',
           weight: `normal`
