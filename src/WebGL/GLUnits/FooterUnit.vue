@@ -3,7 +3,7 @@
 
     <div class="flex flex-col lg:flex-row">
 
-      <div class="lg:w-1/2 relative order-2">
+      <div class="lg:w-1/2 relative">
         <ScissorArea class="lg:absolute top-0 left-0 right-0 bottom-0 h-min100 lg:h-auto" style="z-index: -1;">
           <div slot="dom" class="full">
           </div>

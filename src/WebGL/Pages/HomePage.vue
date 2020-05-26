@@ -4,8 +4,8 @@
 
     <div v-show="!openMenu">
       <HeroUnit></HeroUnit>
-      <IntroUnit></IntroUnit>
       <Momentum></Momentum>
+      <FooterUnit></FooterUnit>
     </div>
     <!-- <div class="w-full h-full"></div> -->
     <!-- <FullMenuBar v-show="openMenu" @close="openMenu = false"></FullMenuBar> -->
