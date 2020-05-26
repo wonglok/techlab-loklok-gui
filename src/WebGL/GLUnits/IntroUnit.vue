@@ -3,12 +3,12 @@
 
     <div class="flex flex-col lg:flex-row">
 
-      <div class="lg:w-1/2 relative">
+      <div class="lg:w-1/2 relative  lg:order-2">
         <ScissorArea class="lg:absolute top-0 left-0 right-0 bottom-0 h-min100 lg:h-auto" style="z-index: -1;">
           <div slot="dom" class="full">
             123
           </div>
-          <FallScene slot="o3d"></FallScene>
+          <DashbaordScene slot="o3d"></DashbaordScene>
         </ScissorArea>
         <!--  -->
       </div>

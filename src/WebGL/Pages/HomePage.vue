@@ -4,6 +4,7 @@
 
     <div v-show="!openMenu" class="w-full h-full relative">
       <HeroUnit></HeroUnit>
+      <IntroUnit></IntroUnit>
     </div>
     <!-- <div class="w-full h-full"></div> -->
     <!-- <FullMenuBar v-show="openMenu" @close="openMenu = false"></FullMenuBar> -->
