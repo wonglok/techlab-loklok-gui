@@ -45,8 +45,10 @@ export default {
       //   await font.load()
       //   document.fonts.add(font)
       // }
+
       async function loadLovelo () {
-        const font = new FontFace('LoveLo', `url('${process.env.BASE_URL}fonts/lovelo/Lovelo-LineLight.ttf')  format('truetype')`, {
+        let link = 'https://res.cloudinary.com/loklok-keystone/raw/upload/v1590476294/loklok/Lovelo/Lovelo-LineLight.ttf'
+        const font = new FontFace('LoveLo', `url('${link}')  format('truetype')`, {
           family: 'LoveLo',
           style: 'normal',
           weight: `normal`
