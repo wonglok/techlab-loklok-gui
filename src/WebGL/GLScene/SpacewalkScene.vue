@@ -67,7 +67,7 @@ import { Scene, Color } from 'three'
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 export default {
-  name: 'HeroScene',
+  name: 'SpacewalkScene',
   components: {
     ...require('../webgl').default
   },

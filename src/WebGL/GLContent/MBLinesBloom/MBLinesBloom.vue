@@ -24,6 +24,7 @@ export default {
   },
   mounted () {
     let link = require('./media/mb-lines-svg-2.svg')
+    link = 'https://res.cloudinary.com/loklok-keystone/image/upload/v1590474804/loklok/mb-lines-svg-2.svg'
 
     this.$on('init', async () => {
       // let camera = this.lookup('camera')
@@ -35,6 +36,7 @@ export default {
           let ctx = canvas.getContext('2d')
           let image = new Image()
           image.src = link
+          image.crossOrigin = true
           image.onload = () => {
             let element = this.lookup('element')
             let elRect = element.getBoundingClientRect()
