@@ -16,5 +16,5 @@ module.exports = {
     //   whitelistPatterns: [ /-(leave|enter|appear)(|-(to|from|active))$/, /^(?!(|.*?:)cursor-move).+-move$/, /^router-link(|-exact)-active$/ ],
     // }),
     // require('autoprefixer')(),
-  ],
+  ]
 }
