@@ -4,7 +4,7 @@
     <div class="flex flex-col lg:flex-row">
 
       <div class="lg:w-1/2 relative lg:order-2 py-24 flex justify-center items-center  bg-gray-200">
-        <a target="_blank" href="https://instagram.com/a/r/?effect_id=225770121951774" class="">
+        <a target="_blank" href="https://igraph.effectnode.com/" class="">
           <div class="flex justify-center items-center p-4">
             <img src="../image/igraph2.png" alt="" class="rounded-lg shadow-lg">
           </div>
